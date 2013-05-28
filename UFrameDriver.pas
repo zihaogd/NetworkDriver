@@ -1862,6 +1862,7 @@ begin
     IsVisible := IsSearchAll or NodeData.IsLocked or
                  ( Pos( FileName, LowerCase( string( NodeData.ShowName ) ) ) > 0 );
     vstNetwork.IsVisible[ SelectNode ] := IsVisible;
+    vstNetwork.Selected[ SelectNode ] := False;
     SelectNode := SelectNode.NextSibling;
   end;
 
